@@ -532,13 +532,6 @@ print(resultado['prob_aprobacion'])  # Probabilidad en %
 
 ---
 
-## 📧 CONTACTO Y SOPORTE
-
-Para preguntas sobre este proyecto:
-- Email: diego.sanchez@example.com
-- GitHub: [tu usuario]
-
----
 
 **Nota:** Este proyecto fue desarrollado con fines educativos. Para implementación en producción se requiere:
 - Datos reales validados
@@ -550,3 +543,4 @@ Para preguntas sobre este proyecto:
 ---
 
 *Generado con Python 3.13 | Scikit-learn 1.5+ | Última actualización: Diciembre 2025*
+
