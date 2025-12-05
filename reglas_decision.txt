@@ -1,0 +1,62 @@
+================================================================================
+REGLAS DE DECISIÓN DEL MODELO DE APROBACIÓN DE CRÉDITOS
+================================================================================
+
+|--- Score_Crediticio <= 698.50
+|   |--- Ratio_Deuda_Ingreso <= 0.78
+|   |   |--- Score_Crediticio <= 607.50
+|   |   |   |--- class: 0
+|   |   |--- Score_Crediticio >  607.50
+|   |   |   |--- Score_Crediticio <= 665.50
+|   |   |   |   |--- Ratio_Deuda_Ingreso <= 0.39
+|   |   |   |   |   |--- class: 1
+|   |   |   |   |--- Ratio_Deuda_Ingreso >  0.39
+|   |   |   |   |   |--- class: 1
+|   |   |   |--- Score_Crediticio >  665.50
+|   |   |   |   |--- class: 1
+|   |--- Ratio_Deuda_Ingreso >  0.78
+|   |   |--- Score_Crediticio <= 644.00
+|   |   |   |--- Ingresos_Mensuales <= 806.68
+|   |   |   |   |--- class: 0
+|   |   |   |--- Ingresos_Mensuales >  806.68
+|   |   |   |   |--- Ingresos_Mensuales <= 1883.14
+|   |   |   |   |   |--- class: 0
+|   |   |   |   |--- Ingresos_Mensuales >  1883.14
+|   |   |   |   |   |--- class: 0
+|   |   |--- Score_Crediticio >  644.00
+|   |   |   |--- Ratio_Deuda_Ingreso <= 1.51
+|   |   |   |   |--- class: 1
+|   |   |   |--- Ratio_Deuda_Ingreso >  1.51
+|   |   |   |   |--- Ingresos_Mensuales <= 1702.62
+|   |   |   |   |   |--- class: 0
+|   |   |   |   |--- Ingresos_Mensuales >  1702.62
+|   |   |   |   |   |--- class: 0
+|--- Score_Crediticio >  698.50
+|   |--- Deuda_Total <= 4361.25
+|   |   |--- Deuda_Total <= 536.93
+|   |   |   |--- class: 1
+|   |   |--- Deuda_Total >  536.93
+|   |   |   |--- Deuda_Total <= 2777.10
+|   |   |   |   |--- Score_Crediticio <= 768.50
+|   |   |   |   |   |--- class: 1
+|   |   |   |   |--- Score_Crediticio >  768.50
+|   |   |   |   |   |--- class: 1
+|   |   |   |--- Deuda_Total >  2777.10
+|   |   |   |   |--- Deuda_Total <= 3235.71
+|   |   |   |   |   |--- class: 1
+|   |   |   |   |--- Deuda_Total >  3235.71
+|   |   |   |   |   |--- class: 1
+|   |--- Deuda_Total >  4361.25
+|   |   |--- class: 1
+
+
+================================================================================
+IMPORTANCIA DE VARIABLES:
+--------------------------------------------------------------------------------
+Score_Crediticio               : 0.6389
+Ratio_Deuda_Ingreso            : 0.2733
+Ingresos_Mensuales             : 0.0559
+Deuda_Total                    : 0.0319
+Num_Cuentas                    : 0.0000
+Antiguedad_Credito_Anos        : 0.0000
+Edad                           : 0.0000
